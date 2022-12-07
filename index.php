@@ -1,12 +1,7 @@
 <?php
-
 require_once __DIR__ . "/Models/Movie.php";
 require_once __DIR__ . "/Models/db.php";
 
-
-$genres = [
-    "thriller", "drhama", "noir", "gangster", "Love", "War", "Western"
-];
 
 var_dump($movies);
 
@@ -24,7 +19,19 @@ var_dump($movies);
 
 <body>
 
+    <section>
+        <h2>Movies</h2>
+        <?php foreach ($movies as $movie) { ?>
+            <h4><?php echo $movie->title ?></h4>
+            <h5><?php echo $movie->director ?>, <?php echo $movie->year ?></h5>
 
+            <ul>
+                <?php foreach ($movie->genres as $genre) { ?>
+                    <li> <?php echo $genre ?> </li>
+                <?php } ?>
+            </ul>
+        <?php } ?>
+    </section>
 
 </body>
 
