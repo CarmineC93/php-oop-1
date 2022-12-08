@@ -24,6 +24,7 @@ var_dump($movies);
         <?php foreach ($movies as $movie) { ?>
             <h4><?php echo $movie->title ?></h4>
             <h5><?php echo $movie->director ?>, <?php echo $movie->year ?></h5>
+            <h4><?php echo $movie->getRandomStar() ?></h4>
 
             <ul>
                 <?php foreach ($movie->genres as $genre) { ?>

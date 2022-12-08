@@ -24,4 +24,10 @@ class Movie
         $this->language = $language;
         $this->genres = $genres;
     }
+
+    public function getRandomStar()
+    {
+        $rndmVote = rand(1, 5);
+        return $rndmVote;
+    }
 }
