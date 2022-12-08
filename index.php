@@ -22,9 +22,9 @@ var_dump($movies);
     <section>
         <h2>Movies</h2>
         <?php foreach ($movies as $movie) { ?>
-            <h4><?php echo $movie->title ?></h4>
+            <h3><?php echo $movie->title ?></h3>
             <h5><?php echo $movie->director ?>, <?php echo $movie->year ?></h5>
-            <h4><?php echo $movie->getRandomStar() ?></h4>
+            <h5>Random Vote: <?php echo $movie->getRandomStar() ?>/5</h5>
 
             <ul>
                 <?php foreach ($movie->genres as $genre) { ?>
